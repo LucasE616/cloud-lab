@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Lab</title>
+  <meta name="description" content="Laboratório simulado para aprender AWS (EC2, S3, IAM), Oracle Cloud, Google Cloud e Linux no navegador.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 24h15a6 6 0 0 0 0-12 8 8 0 0 0-15 2 5 5 0 0 0 0 10z' fill='%2338bdf8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="stylesheet" href="css/aws.css">
+  <link rel="stylesheet" href="css/oci.css">
+  <link rel="stylesheet" href="css/gcp.css">
+  <link rel="stylesheet" href="css/linux.css">
+</head>
+<body>
+  <header id="labbar">
+    <div class="lab-brand"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 24h15a6 6 0 0 0 0-12 8 8 0 0 0-15 2 5 5 0 0 0 0 10z" fill="currentColor"/></svg> Cloud Lab</div>
+    <nav class="lab-tabs" aria-label="Laboratórios">
+      <button data-tab="aws" title="Alt+1"><i style="background:#ff9900"></i>AWS</button>
+      <button data-tab="oci" title="Alt+2"><i style="background:#c74634"></i>Oracle Cloud</button>
+      <button data-tab="gcp" title="Alt+3"><i style="background:#4285f4"></i>Google Cloud</button>
+      <button data-tab="linux" title="Alt+4"><i style="background:#e95420"></i>Linux</button>
+    </nav>
+    <div class="lab-actions">
+      <span class="lab-sim">Simulador · nada aqui é real</span>
+      <button id="btn-missions">🎯 Missões <b id="mission-count">0/0</b></button>
+      <button id="btn-reset" title="Apagar tudo e recomeçar">Resetar</button>
+    </div>
+  </header>
+
+  <main id="stage">
+    <section id="tab-aws" class="console aws"></section>
+    <section id="tab-oci" class="console oci"></section>
+    <section id="tab-gcp" class="console gcp"></section>
+    <section id="tab-linux" class="console linux"></section>
+  </main>
+
+  <aside id="missions" hidden></aside>
+  <div id="lab-toasts" class="lab-toasts"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/aws.js"></script>
+  <script src="js/oci.js"></script>
+  <script src="js/gcp.js"></script>
+  <script src="js/linux.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
